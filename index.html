@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Line Chart</title>
+		<link href="/styles/c3.css" rel="stylesheet" type="text/css">
+		<script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
+		<script src="/js/c3.min.js"></script>
+	</head>
+	<body>
+	<div id="chart"></div>
+	<style>
+	#chart {
+		width: 600px;
+		font-family: Georgia, Times, 'Times New Roman', serif;
+	}
+	#chart .c3-line {
+  		stroke-width: 2px;
+		}
+	</style>
+	<script>
+		
+	var chart = c3.generate({
+    data: {
+    	x: 'x',
+        columns: [
+        	['x', '1986', '1987', '1988', '1989', '1990', '1991', '1992', '1993', '1994', '1995', '1996', '1997', '1998', '1999', '2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014'],
+            ['Referrals Disposed Of', 69, 7, 5, 1, 69, 31, 7, 2, 18, 10, 8, 3, 2, 4, 11, 8, 8, 'no data', 7, 19, 12, 6, 7, 6, 2, 7, 0, 3, 3],
+            ['Prosecutions Filed', 10, 2, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 2, 0, 'no data', 0, 0, 0, 3, 2, 1, 0, 2, 1, 1, 1]
+        ],
+        types: {
+        	'Referrals Disposed Of': 'bar',
+        	'Prosecutions Filed': 'bar'
+        },
+    
+    },
+    
+    color: {
+  		pattern: ['#DA572A', '#6cb9e1']
+		},
+		
+	bar: {
+        width: {
+            ratio: 0.8 // this makes bar width 50% of length between ticks
+        }
+    }
+     
+
+    
+});
+
+	
+
+	</script>
+	
+	</body>
+</html>
